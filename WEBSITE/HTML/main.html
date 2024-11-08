@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Neth's Cafe'</title>
+<link href="../IMAGES/Logo.jpg" rel="icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+body {
+  background-image: url("..//IMAGES/Coffee Background.jpg"); /* Replace with the URL of your coffee background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333; /* Ensures text is readable */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay with transparency */
+  z-index: -1;
+}
+
+.section-heading {
+  color: #fff;
+}
+
+.coffee-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.coffee-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+
+.coffee-item h3 {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 10px 0 5px;
+}
+
+.coffee-item p {
+  font-size: 1em;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Styling for the collapsible sections */
+.collapsible {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.coffee-content {
+  padding: 15px;
+  display: none;
+  overflow: hidden;
+  background-color: #444;
+  color: #fff;
+}
+
+.welcome-message {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.poster {
+  max-width: 100%; /* Ensure the poster scales responsively */
+  height: auto;    /* Maintain aspect ratio */
+  margin-top: 20px;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- Welcome Message -->
+  <div class="welcome-message">
+    <h2>Welcome to Neth's Café!</h2>
+    <p>Your cozy haven for coffee lovers. We are delighted to serve you the best coffee and treats in town!</p>
+    <!-- Poster Image -->
+    <img src="../IMAGES/Poster.jpg" alt="Neth's Café Poster" class="poster"> <!-- Update the image source accordingly -->
+  </div>
+
+  <!-- Menu Section -->
+  <div id="menu">
+    <h2 class="section-heading">Menu</h2>
+
+    <!-- Based Coffee Section -->
+    <h3 class="section-heading">Based Coffee</h3>
+    <button class="collapsible">Click to See Coffee Suggestions</button>
+    <div class="coffee-content">
+      <div class="w3-row-padding w3-padding-16 w3-center" id="coffee">
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Espresso.jpg" alt="Espresso" class="coffee-image">
+          <h3>Espresso</h3>
+          <p>₱50</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Americano coffee.jpg" alt="Americano coffee" class="coffee-image">
+          <h3>Americano</h3>
+          <p>₱75</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Latte.jpg" alt="Latte" class="coffee-image">
+          <h3>Latte</h3>
+          <p>₱60</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Cappuccino.jpg" alt="Cappuccino" class="coffee-image">
+          <h3>Cappuccino</h3>
+          <p>₱80</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Flat white.jpg" alt="Flat White" class="coffee-image">
+          <h3>Flat White</h3>
+          <p>₱55</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/macchiato.jpg" alt="Macchiato" class="coffee-image">
+          <h3>  Macchiato</h3>
+          <p>₱85</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Mocha.jpg" alt="Mocha" class="coffee-image">
+          <h3>Mocha</h3>
+          <p>₱90</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cold Coffee Section -->
+    <h3 class="section-heading">Cold Coffee</h3>
+    <button class="collapsible">Click to See Coffee Suggestions</button>
+    <div class="coffee-content">
+      <div class="w3-row-padding w3-padding-16 w3-center" id="cold-coffee">
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/iced coffee.jpg" alt="Iced Coffee" class="coffee-image">
+          <h3>Iced Coffee</h3>
+          <p>₱55</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/iced latte.jpg" alt="Iced Latte" class="coffee-image">
+          <h3>Iced Latte</h3>
+          <p>₱100</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/cold brew.jpg" alt="Cold Brew" class="coffee-image">
+          <h3>Cold Brew</h3>
+          <p>₱65</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/iced mocha.jpg" alt="Iced Mocha" class="coffee-image">
+          <h3>Iced Mocha</h3>
+          <p>₱80</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialty Coffee Section -->
+    <h3 class="section-heading">Specialty Coffee</h3>
+    <button class="collapsible">Click to See Coffee Suggestions</button>
+    <div class="coffee-content">
+      <div class="w3-row-padding w3-padding-16 w3-center" id="specialty-coffee">
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/Affogato.jpg" alt="Affogato" class="coffee-image">
+          <h3>Affogato</h3>
+          <p>₱200</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/irish coffee.jpg" alt="Irish Coffee" class="coffee-image">
+          <h3>Irish Coffee</h3>
+          <p>₱250</p>
+        </div>
+        <div class="w3-quarter coffee-item">
+          <img src="../IMAGES/turkish coffee.jpg" alt="Turkish Coffee" class="coffee-image">
+          <h3>Turkish Coffee</h3>
+          <p>₱150</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center" id="about">
+    <h3 class="section-heading">About Us</h3><br>
+    <p class="section-heading">Nestled in the heart of Naval Biliran, Neth's Café is more than just a coffee shop it's a cozy haven for coffee lovers and anyone seeking a friendly, relaxing spot. We believe that a great cup of coffee can bring people together, spark creativity, and brighten your day.</p>
+    <p class="section-heading">Our journey began with a simple idea: to create a place where everyone feels welcome to enjoy top-notch coffee and delicious treats. Our baristas are passionate about crafting each drink, whether it's a classic espresso, a rich latte, or one of our unique seasonal blends. Every cup is made with high quality, carefully sourced beans, ensuring a full, authentic flavor in every sip.</p>
+    <p class="section-heading">At Neth's Café, we’re dedicated to creating a memorable experience with each visit. Whether you're here for a quiet moment, catching up with friends, or finding inspiration for your next big idea, we’re here to make your day just a bit better.</p>
+    <div class="w3-padding-32">
+      <h4 class="section-heading"><b>Owner: John Kenneth Vienes</b></h4>
+      <h6 class="section-heading"><i>BSCS 3A</i></h6>
+    </div>
+  </div>
+
+  <!-- Map Section -->
+  <div class="w3-container w3-padding-64 w3-text-white w3-center" id="myMap">
+    <h3 class="section-heading">Contact us at: 09294253794</h3>
+    <p>We are located at:</p>
+    <p>PI Garcia Street Naval Biliran, Biliran, Philippines</p>
+  </div>
+
+</div>
+
+<!-- JavaScript for Collapsible Sections -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var coll = document.getElementsByClassName("collapsible");
+
+  Array.from(coll).forEach(function(button) {
+    button.addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+});
+</script>
+<footer>
+  <p>Design By: John Kenneth Vienes<br>
+  <a href="https://www.facebook.com/johnkenneth.vienes.96?mibextid=ZbWKwL">https://www.facebook.com/johnkenneth.vienes.96?mibextid=ZbWKwL</a></p>
+  <p class="section-heading">Neth's Cafe' All Right Reserved 2024</p>
+</footer>
+</body>
+</html>
